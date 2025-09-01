@@ -80,7 +80,7 @@ document.querySelector('#submitBtn').addEventListener("click", () => {
     const autor = document.querySelector('#autorInput').value;
     const genero = document.querySelector('#genero-select').value;
     const anioPublicacion = document.querySelector('#anioPublicacion').value;
-
+    console.log("a")
     const errores = validaciones(isbn, titulo, autor, anioPublicacion);
 
     if (errores.length > 0) {
@@ -96,6 +96,11 @@ document.querySelector('#submitBtn').addEventListener("click", () => {
             showConfirmButton: false,
             timer: 1700
         });
+        document.querySelector('#isbnInput').value = ''
+        document.querySelector('#tituloInput').value = ''
+        document.querySelector('#autorInput').value = ''
+        document.querySelector('#genero-select').value = ''
+        document.querySelector('#anioPublicacion').value = ''
     }
 });
 
